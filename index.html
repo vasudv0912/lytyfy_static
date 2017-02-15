@@ -1,10 +1,50 @@
+<style type="text/css">
+.parteners-title{
+             color:#585858; 
+             font-size: 25px;
+             font-size: 17px;
+             font-family: Montserrat,sans-serif;
+             font-weight: bold;
+             margin-bottom: 100px;
+           }
+            hr{
+             background-color: #F8F8F8;
+           }
+      .hover:hover
+{
+    cursor: pointer;
+    background-color: #337ab7 !important;
+    
+}
+</style>
 <!DOCTYPE html>
 <html ng-app="starterApp" lang="en" >
 <head>
     <title>Lytyfy | Power to Everyone Everywhere</title>
 
     <link rel="stylesheet" href="./angular-material.min.css"/>
+     <link rel="stylesheet" href="./angular-material.min.css"/>
     <link rel="icon" href="./favicon.ico">
+    <script type="text/javascript" src="./angular.min.js"></script>
+    <script type="text/javascript" src="./angular-animate.min.js"></script>
+    <script type="text/javascript" src="./angular-aria.min.js"></script>
+    <script type="text/javascript" src="./angular-material.min.js"></script>
+    <script type="text/javascript" src="./angular-scroll.js"></script>
+    <script type="text/javascript">
+
+        var app = angular
+                .module('starterApp', ['ngMaterial', 'duScroll'])
+                .run(function ($log) {
+                    $log.debug("starterApp + ngMaterial running...");
+                });
+        app.controller('scrollCtrl', function ($scope) {$scope.scroll = function (x) {
+                var someElement = angular.element(document.getElementById(x));
+                var container = angular.element(document.getElementById('container'));
+                container.scrollTo(someElement, 0, 1000);
+            }
+        });
+
+    </script>
 </head>
 
 <!--
@@ -18,163 +58,118 @@
   ✓ Lock open the sideNav, add shadow
 -->
 
-<body ng-controller="scrollCtrl" layout="column" >
-<md-toolbar layout="row" style="background-color:#f8f8f8;">  
-<div class="md-toolbar-tools">
-      <span><a href="file:///home/neha/WebstormProjects/lytyfy/index.html"><img src="./logo.png"/></a></span>
-      <!-- fill up the space between left and right area -->
-      <span flex></span>
+<body ng-controller="scrollCtrl" layout="column" ng-cloak>
+    <md-toolbar layout="row" layout-align="center center" style="background-color:#f8f8f8; height:90px;">
+        <div class="md-toolbar-tools">
+            <span><a href="http://lytyfy.org/"><img src="./logo.png"/></a></span>
+            <!-- fill up the space between left and right area -->
+            <span flex></span>
 
-<!--             <div layout="row" layout-align="center end" >
- -->
-<md-list>
-    
-    <md-item >
+            <md-list>
 
-        <md-button ng-click="scroll(1)" style="color:#337ab7; font-weight:bold;" >
-            HOME
-        </md-button>
-    </md-item>
+                <md-item>
 
-    <md-item >
-        <md-button  style="color:#337ab7; font-weight:bold;">
-           <a href="http://try.lytyfy.org/"> TRY</a>
-        </md-button>
-    </md-item>
+                    <md-button ng-href="#" ng-click="scroll(1)" style="color:#337ab7; font-weight:bold;">
+                        HOME
+                    </md-button>
+                </md-item>
+                <md-item>
+                    <md-button ng-href="http://try.lytyfy.org/" style="color:#337ab7; font-weight:bold;text-transform: capitalize;">
+                       TRY LYTYFY<sup><sup>βeta</sup></sup>
+                    </md-button>
+                </md-item>
+                <md-item>
+                    <md-button ng-href="#" ng-click="scroll(2)" style="color:#337ab7; font-weight:bold;">
+                        ABOUT
+                    </md-button>
+                </md-item>
+                <md-item>
+                    <md-button ng-href="#" ng-click="scroll(4)" style="color:#337ab7; font-weight:bold;">
+                        CONTACT
+                    </md-button>
+                </md-item>
 
-    <md-item >
-        <md-button ng-click="scroll(2)" style="color:#337ab7; font-weight:bold;">
-            ABOUT
-        </md-button>
-    </md-item>
-
-    <!-- <md-item >
-        <md-button ng-click="scroll(3)" style="color:#337ab7; font-weight:bold;">
-            SOLUTION
-        </md-button>
-    </md-item> -->
-
-    <md-item >
-        <md-button ng-click="scroll(4)" style="color:#337ab7; font-weight:bold;">
-            CONTACT
-        </md-button>
-    </md-item>
-
-</md-list>
-
-</div>
-    </md-toolbar>
-
-
-<!-- <div layout="row">
- -->
-
-
-    <md-content flex  id="container">
-
-<!--         <div>
- -->            
-            <div id="1" layout="column" layout-align="center center" >
-                    <img src="./banner-img.jpg"/>
-
-            </div>
-            <div layout="column" layout-align="center center" layout-fill style="min-height: 400px;" >
-            <div flex><img src="./banner.jpg"/></div></div>
-
-               
-
-
-            <div id="2" layout="column" layout-align="end center" style="min-height: 300px;" >
-            <h3 style="font-size:36px; color:#464646; font-family:neuropol">About</h3>
-            </div>
- 
-<div layout="row" layout-padding layout-margin layout-fill style=" min-height: 450px; text-align:center; padding-left:90px; padding-right:90px; color:#777; font-size:15px; font-family:Helvetica Neue; letter-spacing:2px; line-height:30px; font-weight:10px;" >       
-           1.4 billion People in the world have no access to power and 400 million of them live in rural India.Deviab 
-                was founded with a vision to eradicate energy inequity in India and our mission is to provide
-                  reliable and affordable energy services to low income rural households. We promote clean
-                      energy access in rural India by synergizing technology, microfinance and 
-                                        community engagement.
-        
-
-      </div>
-
-  
-
-
-
-<!-- 
-                  <div id="3" layout="row" layout-align="space-around center">
-                    <div> <img src="./solution.png"/></div>
-                    <div> <img src="./consulting.png"/></div>
-                    <div> <img src="./csr.png"/></div>
-                </div>
-  
-                <div layout="row" layout-padding layout-margin layout-fill style="min-height: 400px; text-align:center; color:#777; font-size:15px; font-family:Helvetica Neue; letter-spacing:2px; line-height:30px; font-weight:10px;">
-                    <div >Custom designed, high quality off grid solar products for rural markets. We support the creation of self sustaining markets and factor in customer's ability to pay while designing energy solutions for </div>
-                    <div>Custom designed, high quality off grid solar products for rural markets. We support the creation of self sustaining markets and factor in customer's ability to pay while designing energy solutions for them</div>
-                    <div> Custom designed, high quality off grid solar products for rural markets. We support the creation of self sustaining markets and factor in customer's ability to pay while designing energy solutions for them</div>
-                </div> -->
-                 <!--  <div layout="column" layout-align="center center" >
-                              <div layout="row" layout-align="space-around center" >
-                    <img src="./consulting.png"/>
-                    <img src="./consulting.png"/>
-
-                    <img src="./consulting.png"/>
-                  </div>
-                  </div> -->
-  
-
-
-
-<!-- </div>
-
- --> 
-
- <footer  id="4" layout-padding layout-margin layout-fill style="min-height: 200px; background-color: #f8f8f8;">
-        <div layout="row" layout-align="center center">
-          <div style="border-radius: 100px;  height: 50px; width: 50px;  background: #3C3C3C; margin-right:30px; " > <a href="https://www.facebook.com/deviab.energy/"><img style="padding-top: 10px; padding-left: 8px;" src="./fb.png"/></a></div>
-          <div style="border-radius: 100px;  height: 50px; width: 50px;  background: #3C3C3C;" > <a href="https://twitter.com/@deviab_energy"> <img style="padding-top: 11px; padding-left: 10px;" src="./tw.png" /></a></div>
-           <div style="border-radius: 100px;  height: 50px; width: 50px;  background: #3C3C3C; margin-left:30px;" > <a href="https://www.linkedin.com/company/lytyfy"> <img style="padding-top: 5px; padding-left: 10px;" src="./in.png"/ ></a></div>
+            </md-list>
 
         </div>
-                 <div layout="column" layout-align="center" style=" text-align:center; color:#756060; font-size:16px; font-weight:bold; font-family:Montserrat; letter-spacing:2px; line-height:1px;">info@lytyfy.org</div>
-                 <div layout="column" layout-align="center" style="text-align:center; color:#756060; font-size:16px; font-weight:bold; font-family:Montserrat; letter-spacing:2px; line-height:1px;">Copyright © Deviab Research and Implementation Pvt Ltd 2016</div>
+    </md-toolbar>
+    <md-content flex id="container">
+        <div id="1" layout="column" layout-align="center center">
+            <img src="./banner-img.jpg"/>
+
+        </div>
+        <div layout="column" layout-align="center center" style="min-height: 200px;">
+            <div flex><img src="./banner.jpg"/></div>
+        </div>
+        <div id="2" layout="row"
+             style="text-align:center; padding-left:90px; padding-right:90px; color:#777; font-size:15px; font-family:Montserrat, sans-serif; letter-spacing:2px; line-height:30px; font-weight:10px;">
+            1.4 billion people in the world have no access to power and 400 million of them live in rural India. Lytyfy
+            aims
+            to eradicate energy inequity in India and our mission is to provide reliable and affordable energy services
+            to
+            low income rural customers. We promote clean energy access in rural India by synergizing community
+            engagement,
+            technology and finance.
 
 
+        </div>
+        <div layout="row" layout-align="center center" style="min-height:200px;">
+            <md-button ng-href="http://try.lytyfy.org/"
+                       style="text-decoration:none; background-color:#337ab7; font-size:20px; color:white; letter-spacing:2px; font-family:calibri; align:center; text-transform:none;"
+                       class="md-raised">
+                Try Lytyfy
+            </md-button>
+        </div>
 
+        <span layout="row"  class="parteners-title"><span flex="5"></span><hr  flex/><span flex="5"></span> SUPPORTED BY <span flex="5"></span><hr flex/><span flex="5"></span></span>
+ 
+ <div  layout="row" layout-align="space-around center">
+     <div><img style="width: 260px;height: 70px;margin-bottom:100px; " src="./logo-giz.png"/></div>
+     <div><img style="width: 80px;height: 75px;margin-bottom:100px;" src="./unltd-india.png"/></div>
+     <div><img style="width: 280px;height: 70px;margin-bottom:100px;" src="./smart-villages.png"/></div>
+     <div><img style="width: 117px;height: 85px;margin-bottom:100px;" src="./teri-logo.png"/></div>
+ </div>
 
-               
+ <span layout="row"  class="parteners-title"><span flex="5"></span><hr  flex/><span flex="5"></span> MEDIA <span flex="5"></span><hr flex/><span flex="5"></span></span>
 
-    </footer>
-        </md-content>
+<div  layout="row" layout-align="space-around center">
+  <div><a  href="http://economictimes.indiatimes.com/small-biz/startups/this-startup-brings-light-and-money-to-people-in-hinterland/articleshow/56133416.cms" target="_blank"><img style="width: 210px;margin-bottom:100px; " src="./economics.png"/></a></div>
 
+  <div><a  href="https://yourstory.com/2017/01/axilor-ventures-winter-2016-batch/" target="_blank"><img style="width: 140px;height: 85px;margin-bottom:100px;" src="./yourstory1.png"/></a></div>
+    
+   <div><a  href="http://e4sv.org/publication/smart-villages-announces-naturetech-infra-winner-2016-off-grid-energy-impact-competition-india/" target="_blank"><img style="width: 230;height: 75px;margin-bottom:100px;" src="./smart-villages.png"/></a></div>
 
-<script type="text/javascript" src="./angular.min.js"></script>
-<script type="text/javascript" src="./angular-animate.min.js"></script>
-<script type="text/javascript" src="./angular-aria.min.js"></script>
-<script type="text/javascript" src="./angular-material.min.js"></script>
-<script type="text/javascript" src="./angular-scroll.js"></script>
+   <div><a  href="http://wingzit.co.uk/2016/02/from-struggle-to-success-a-life-with-light/" target="_blank"><img style="width: 130px;height: 40px;margin-bottom:100px;" src="./wing.png"/></a></div>
 
-<script type="text/javascript">
+    <div><a  href="http://pageswype.com/inspiration-startups/" target="_blank"><img style="width: 150;height: 65px;margin-bottom:100px;" src="./PSLogo.png"/></a></div>
 
-    var app=angular
-            .module('starterApp', ['ngMaterial','duScroll'])
-            .run(function($log){
-                $log.debug("starterApp + ngMaterial running...");
-            });
-    app.controller('scrollCtrl',['$scope','$document',function($scope,$document)
-    {
-      $scope.scroll=function(x){
-        var someElement=angular.element(document.getElementById(x));
-        var container=angular.element(document.getElementById('container'));
-        container.scrollTo(someElement,0,1000);
-    }
+   <div><a  href="http://asiaforgood.com" target="_blank"><img style="width: 200px;height: 60px;margin-bottom:100px;" src="./asiafg.png"/></a></div>
+</div>
+       <footer layout-padding layout-margin style="min-height: 170px; background-color: #f8f8f8;" flex >
+    <div layout="row" layout-align="center center">
+       <!--  <div class="hover" style="border-radius: 100px;  height: 50px; width: 50px;  background: #3C3C3C; margin-right:30px; "> -->
+            <div layout-padding layout-margin><a href="https://www.facebook.com/lets.lytyfy" target="_blank">
+            <img layout-padding src="./f.png"/></a></div>
+        <!-- </div> -->
+        <!-- <div class="hover" style="border-radius: 100px;  height: 50px; width: 50px;  background: #3C3C3C;"> -->
+        <div layout-padding layout-margin><a href="https://www.twitter.com/lytyfy" target="_blank"> 
+        <img layout-padding style="margin-top: 5px;" src="./t.png"/></a></div>
+                        <!-- </div> -->
+       <!--  <div class="hover" style="border-radius: 100px;  height: 50px; width: 50px;  background: #3C3C3C; margin-left:30px;"> -->
+            <div layout-padding layout-margin><a href="https://www.linkedin.com/company/lytyfy" target="_blank"> 
+            <img layout-padding src="./l.png"/></a></div>
+       <!--  </div> -->
 
-
-    }]);
-
-</script>
-
-
+    </div>
+    <div layout="column" layout-align="center center" layout-padding layout-margin
+         style="color:#808080; font-size:14px; font-family:Montserrat,sans-serif; letter-spacing:2px; line-height:1px;">
+        support@lytyfy.org
+    </div>
+    <div layout="column" layout-align="center center" layout-padding layout-margin
+         style="color:#808080; font-size:14px; font-family:Montserrat,sans-serif; letter-spacing:2px; line-height:1px;">
+        Copyright © Deviab Research and Implementation Pvt Ltd 2016
+    </div>
+</footer>
+    </md-content>
 </body>
 </html>
