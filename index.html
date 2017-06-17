@@ -1,3 +1,4 @@
+
 <style type="text/css">
 .parteners-title{
              color:#585858; 
@@ -15,6 +16,29 @@
     cursor: pointer;
     background-color: #337ab7 !important;
     
+}
+.background-image { position: relative;width:100%;height: 100%;  }
+ .inside-image { position: absolute; top: 250px;width: 500px;  }
+ .inside-content { position: absolute; top: 500px;width: 1000px;  }
+ .img{
+    border-radius: 15px;
+    height: 190px;"
+}
+.name{
+    font-size:15px;
+    font-weight:bold;
+    margin-top:20px;
+    text-align: center;
+}
+.position{
+    margin-top:10px;
+    margin-bottom:10px;
+    text-align: center;
+    font-size:14px;
+}
+.link{
+    width: 180px;
+    margin-left: 5px;
 }
 </style>
 <!DOCTYPE html>
@@ -58,11 +82,10 @@
   ✓ Lock open the sideNav, add shadow
 -->
 
-<body ng-controller="scrollCtrl" layout="column" ng-cloak>
-    <md-toolbar layout="row" layout-align="center center" style="background-color:#f8f8f8; height:90px;">
+    <!-- <md-toolbar layout="row" layout-align="center center" style="background-color:#f8f8f8; height:90px;">
         <div class="md-toolbar-tools">
             <span><a href="http://lytyfy.org/"><img src="./logo.png"/></a></span>
-            <!-- fill up the space between left and right area -->
+            fill up the space between left and right area
             <span flex></span>
 
             <md-list>
@@ -92,47 +115,157 @@
             </md-list>
 
         </div>
-    </md-toolbar>
+    </md-toolbar> -->
+    <body ng-controller="scrollCtrl" layout="column" ng-cloak>
+
     <md-content flex id="container">
-        <div id="1" layout="column" layout-align="center center">
+
+    <div id="1" layout="column" layout-align="center center"> 
+    <img src="./background.jpg" class="background-image"/> 
+    <img src="./logo.png" class="inside-image"/> 
+    <div layout="row" class="inside-content"
+             style="text-align:center; padding-left:20px; padding-right:20px; color:#fff; font-size:18px; font-family:Montserrat, sans-serif; letter-spacing:2px; line-height:30px; font-weight:10px;">
+            Lytyfy is a financial technology company offering flexible financing options to the unbanked and underbanked population in India to help them access essential product and services. 
+We’re on a mission to provide more simpler and affordable options to purchase and finance products likes Solar home systems, Smartphones and Laptops to the low and middle income customer segment in India.
+
+
+        </div>
+    </div> 
+   <!--  <div id="1" layout="column" layout-align="center center">
             <img src="./banner-img.jpg"/>
 
-        </div>
-        <div layout="column" layout-align="center center" style="min-height: 200px;">
-            <div flex><img src="./banner.jpg"/></div>
-        </div>
+        </div> -->
+       
+       <div style="min-height:620px;margin-top: 100px;">
+    <!-- <md-toolbar style="background-color:#fff; margin-top: 50px;">
+      <div flex class="md-toolbar-tools">
+        <md-button ng-href="#" ng-click="scroll(1)" style="color:#337ab7; font-weight:bold;" >
+          HOME
+        </md-button>
+        <span flex></span>
+
+        <md-button  style="color:#337ab7; font-weight:bold;">
+          TRY LYTYFY<sup><sup>βeta</sup></sup>
+        </md-button>
+        <span flex></span>
+
+       <a href="http://lytyfy.org/"><img src="./logo.png"/></a>
+        <span flex></span>
+
+        <md-button  ng-href="#" ng-click="scroll(2)" style="color:#337ab7; font-weight:bold;">
+          ABOUT
+        </md-button>
+        <span flex></span>
+
+        <md-button ng-href="#" ng-click="scroll(4)" style="color:#337ab7; font-weight:bold;">
+          CONTACT
+        </md-button>
+      </div>
+    </md-toolbar> -->
+        
+        <div layout="row">
+        <div layout="column" layout-align="center center" >
+            <h2 style="text-align:center; padding-left:90px; padding-right:90px; color:#777; font-size:45px; font-family:Montserrat, sans-serif; letter-spacing:2px; line-height:30px; font-weight:10px;">Work</h2>
         <div id="2" layout="row"
-             style="text-align:center; padding-left:90px; padding-right:90px; color:#777; font-size:15px; font-family:Montserrat, sans-serif; letter-spacing:2px; line-height:30px; font-weight:10px;">
-            1.4 billion people in the world have no access to power and 400 million of them live in rural India. Lytyfy
-            aims
-            to eradicate energy inequity in India and our mission is to provide reliable and affordable energy services
-            to
-            low income rural customers. We promote clean energy access in rural India by synergizing community
-            engagement,
-            technology and finance.
+             style="text-align:center; padding-left:90px; padding-right:90px; color:#777; font-size:18px; font-family:Montserrat, sans-serif; letter-spacing:2px; line-height:30px; font-weight:10px;">
+            Lytyfy is currently focused on clean energy financing space and reimagining how clean energy products and services are financed and distributed to the underbanked market segment in India. We've built a solar financing platform platform_name that connects individual and institutional investors with curated solar energy projects and creditworthy borrowers willing to purchase solar off-grid products.
 
 
         </div>
-        <div layout="row" layout-align="center center" style="min-height:200px;">
+        </div>
+        <div layout="column">
+          <div flex><img src="./banner-img.jpg"/></div>
+        </div>
+        </div>
+
+        </div>
+
+        <div style="min-height:580px;margin-top: 100px;">
+    <h2 style="text-align:center; padding-left:90px; padding-right:90px; color:#777; font-size:45px; font-family:Montserrat, sans-serif; letter-spacing:2px; line-height:30px; font-weight:10px;margin-top: 10px;">Team</h2>
+        
+        <div layout="row" layout-align="space-around center"
+     style="margin-top: 100px;">
+    <div>
+        <img class="img" src="./vishnu.jpg"/>
+
+        <div class="name">Vishnu Raghunathan</div>
+        <div class="position">Co-founder and CEO</div>
+        <a  href="https://www.linkedin.com/in/vishnuraghunathan" target="_blank"> 
+        <img class="link" src="./button-linkedin.png"/></a>
+    </div>
+    <div>
+        <img class="img" src="./dpk.jpg"/>
+        <div class="name">S. Deepak Kumar</div>
+        <div class="position">Co-founder and CTO</div>
+        <a href="https://www.linkedin.com/in/sdeepak23" target="_blank">
+        <img class="link" src="./button-linkedin.png"/></a>
+
+    </div>
+     <div >
+        <img class="img" src="./neha.jpg"/>
+        <div class="name">Neha Goswami</div>
+        <div class="position">Developer</div>
+        <a href="https://www.linkedin.com/in/nehagoswami2403" target="_blank"> 
+        <img class="link" src="./button-linkedin.png"/></a>
+    </div>
+    
+    <div >
+        <img class="img" style="width:190px;" src="./vasu.jpg"/>
+        <div class="name">Vasu</div>
+        <div class="position">Developer</div>
+        <a href="https://in.linkedin.com/in/vasudv" target="_blank"> 
+        <img class="link"  src="./button-linkedin.png"/></a>
+    </div>
+     
+     
+</div>
+<!-- 
+<div layout="row" layout-align="space-around center"
+     style="margin-top: 50px; margin-bottom: 17%;">
+     <div >
+        <img class="img" src="./neha.jpg"/>
+        <div class="name">Neha Goswami</div>
+        <div class="position">Developer</div>
+        <a href="https://www.linkedin.com/in/nehagoswami2403" target="_blank"> 
+        <img class="link" src="./button-linkedin.png"/></a>
+    </div>
+    
+    <div >
+        <img class="img" style="width:190px;" src="./vasu.jpg"/>
+        <div class="name">Vasu</div>
+        <div class="position">Developer</div>
+        <a href="https://in.linkedin.com/in/vasudv" target="_blank"> 
+        <img class="link"  src="./button-linkedin.png"/></a>
+    </div>
+     
+</div> -->
+
+
+        </div>
+      <!--   <div layout="row" layout-align="center center" style="min-height:200px;">
             <md-button ng-href="http://try.lytyfy.org/"
                        style="text-decoration:none; background-color:#337ab7; font-size:20px; color:white; letter-spacing:2px; font-family:calibri; align:center; text-transform:none;"
                        class="md-raised">
                 Try Lytyfy
             </md-button>
-        </div>
+        </div> -->
+<div style="min-height:580px;margin-top: 50px;">
+        <!-- <span layout="row"  class="parteners-title"><span flex="5"></span><hr  flex/><span flex="5"></span> SUPPORTED BY <span flex="5"></span><hr flex/><span flex="5"></span></span> -->
+<h2 style="text-align:center; padding-left:90px; padding-right:90px; color:#777; font-size:45px; font-family:Montserrat, sans-serif; letter-spacing:2px; line-height:30px; font-weight:10px;">Supported By</h2>
 
-        <span layout="row"  class="parteners-title"><span flex="5"></span><hr  flex/><span flex="5"></span> SUPPORTED BY <span flex="5"></span><hr flex/><span flex="5"></span></span>
- 
- <div  layout="row" layout-align="space-around center">
+ <div  layout="row" layout-align="space-around center" style="margin-top: 170px;">
      <div><img style="width: 260px;height: 70px;margin-bottom:100px; " src="./logo-giz.png"/></div>
      <div><img style="width: 80px;height: 75px;margin-bottom:100px;" src="./unltd-india.png"/></div>
      <div><img style="width: 280px;height: 70px;margin-bottom:100px;" src="./smart-villages.png"/></div>
      <div><img style="width: 117px;height: 85px;margin-bottom:100px;" src="./teri-logo.png"/></div>
  </div>
+</div>
 
- <span layout="row"  class="parteners-title"><span flex="5"></span><hr  flex/><span flex="5"></span> MEDIA <span flex="5"></span><hr flex/><span flex="5"></span></span>
+<div style="min-height:500px;">
+<!--  <span layout="row"  class="parteners-title"><span flex="5"></span><hr  flex/><span flex="5"></span> MEDIA <span flex="5"></span><hr flex/><span flex="5"></span></span> -->
+<h2 style="text-align:center; padding-left:90px; padding-right:90px; color:#777; font-size:45px; font-family:Montserrat, sans-serif; letter-spacing:2px; line-height:30px; font-weight:10px;">Media</h2>
+<div  layout="row" layout-align="space-around center" style="margin-top: 200px;">
 
-<div  layout="row" layout-align="space-around center">
 <div><a  href="http://e4sv.org/events/energy-entrepreneurs-business-models-for-off-grid-energy-and-social-impact/" target="_blank"><img style="width: 70;height: 60px;margin-bottom:100px;" src="./smartv.png"/></a></div>
 
   
@@ -147,6 +280,8 @@
     <div><a  href="http://pageswype.com/inspiration-startups/" target="_blank"><img style="width: 150;height: 65px;margin-bottom:100px;" src="./PSLogo.png"/></a></div>
 
    <div><a  href="http://asiaforgood.com" target="_blank"><img style="width: 200px;height: 60px;margin-bottom:100px;" src="./asiafg.png"/></a></div>
+</div>
+
 </div>
        <footer layout-padding layout-margin style="min-height: 170px; background-color: #f8f8f8;" flex >
     <div layout="row" layout-align="center center">
@@ -170,9 +305,11 @@
     </div>
     <div layout="column" layout-align="center center" layout-padding layout-margin
          style="color:#808080; font-size:14px; font-family:Montserrat,sans-serif; letter-spacing:2px; line-height:1px;">
-        Copyright © Deviab Research and Implementation Pvt Ltd 2016
+        Copyright © Deviab Research and Implementation Pvt Ltd 2017
     </div>
 </footer>
     </md-content>
 </body>
 </html>
+
+
