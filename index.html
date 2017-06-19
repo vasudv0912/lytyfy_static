@@ -53,9 +53,23 @@
     <script type="text/javascript" src="./angular-animate.min.js"></script>
     <script type="text/javascript" src="./angular-aria.min.js"></script>
     <script type="text/javascript" src="./angular-material.min.js"></script>
+
 </head>
     <body layout="column" ng-cloak>
 
+
+    <script type="text/javascript">
+
+        var app = angular
+                .module('starterApp', ['ngMaterial'])
+                .run(function ($log) {
+                    $log.debug("starterApp + ngMaterial running...");
+                });
+        
+
+    </script>
+</head>
+    <body layout="column" ng-cloak>
     <md-content flex id="container">
 
     <div id="1" layout="column" layout-align="center center"> 
@@ -67,8 +81,10 @@
 We’re on a mission to provide more simpler and affordable options to purchase and finance products likes Solar home systems, Smartphones and Laptops to the low and middle income customer segment in India.
         </div>
     </div> 
+
        <div style="min-height:620px;margin-top: 100px;">
   
+
         <div layout="row">
         <div layout="column" layout-align="center center" >
             <h2 style="text-align:center; padding-left:90px; padding-right:90px; color:#777; font-size:45px; font-family: Ubuntu, sans-serif; letter-spacing:2px; line-height:30px; font-weight:10px;">Work</h2>
@@ -124,10 +140,12 @@ We’re on a mission to provide more simpler and affordable options to purchase 
      
      
 </div>
+
         </div>
         </div>
 <div style="min-height:580px;margin-top: 50px;">
      
+
 <h2 style="text-align:center; padding-left:90px; padding-right:90px; color:#777; font-size:45px; font-family: Ubuntu, sans-serif; letter-spacing:2px; line-height:30px; font-weight:10px;">Supported By</h2>
 
  <div  layout="row" layout-align="space-around center" style="margin-top: 170px;">
@@ -161,10 +179,12 @@ We’re on a mission to provide more simpler and affordable options to purchase 
 </div>
        <footer layout-padding layout-margin style="min-height: 170px; background-color: #f8f8f8;" flex >
     <div layout="row" layout-align="center center">
+
        
             <div layout-padding layout-margin><a href="https://www.facebook.com/lets.lytyfy" target="_blank">
             <img layout-padding src="./f.png"/></a></div>
        
+
         <div layout-padding layout-margin><a href="https://www.twitter.com/lytyfy" target="_blank"> 
         <img layout-padding style="margin-top: 5px;" src="./t.png"/></a></div>
                        
