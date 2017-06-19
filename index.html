@@ -54,68 +54,7 @@
     <script type="text/javascript" src="./angular-aria.min.js"></script>
     <script type="text/javascript" src="./angular-material.min.js"></script>
     <script type="text/javascript" src="./angular-scroll.js"></script>
-    <script type="text/javascript">
-
-        var app = angular
-                .module('starterApp', ['ngMaterial', 'duScroll'])
-                .run(function ($log) {
-                    $log.debug("starterApp + ngMaterial running...");
-                });
-        app.controller('scrollCtrl', function ($scope) {$scope.scroll = function (x) {
-                var someElement = angular.element(document.getElementById(x));
-                var container = angular.element(document.getElementById('container'));
-                container.scrollTo(someElement, 0, 1000);
-            }
-        });
-
-    </script>
 </head>
-
-<!--
-  ✓ Create Angular shell app
-  ✓ Use `bower install angular-material`
-  ✓ Load the CSS (before our app.css),
-  ✓ Load the angular-material.js library and its dependent angular-aria.js and angular-animate.js libraries.
-  ✓ Then set the module dependency on 'ngMaterial'
-  ✓ Use wirefames to determine containers
-  ✓ Configure container layouts
-  ✓ Lock open the sideNav, add shadow
--->
-
-    <!-- <md-toolbar layout="row" layout-align="center center" style="background-color:#f8f8f8; height:90px;">
-        <div class="md-toolbar-tools">
-            <span><a href="http://lytyfy.org/"><img src="./logo.png"/></a></span>
-            fill up the space between left and right area
-            <span flex></span>
-
-            <md-list>
-
-                <md-item>
-
-                    <md-button ng-href="#" ng-click="scroll(1)" style="color:#337ab7; font-weight:bold;">
-                        HOME
-                    </md-button>
-                </md-item>
-                <md-item>
-                    <md-button ng-href="http://try.lytyfy.org/" style="color:#337ab7; font-weight:bold;text-transform: capitalize;">
-                       TRY LYTYFY<sup><sup>βeta</sup></sup>
-                    </md-button>
-                </md-item>
-                <md-item>
-                    <md-button ng-href="#" ng-click="scroll(2)" style="color:#337ab7; font-weight:bold;">
-                        ABOUT
-                    </md-button>
-                </md-item>
-                <md-item>
-                    <md-button ng-href="#" ng-click="scroll(4)" style="color:#337ab7; font-weight:bold;">
-                        CONTACT
-                    </md-button>
-                </md-item>
-
-            </md-list>
-
-        </div>
-    </md-toolbar> -->
     <body ng-controller="scrollCtrl" layout="column" ng-cloak>
 
     <md-content flex id="container">
@@ -131,44 +70,15 @@ We’re on a mission to provide more simpler and affordable options to purchase 
 
         </div>
     </div> 
-   <!--  <div id="1" layout="column" layout-align="center center">
-            <img src="./banner-img.jpg"/>
-
-        </div> -->
-       
        <div style="min-height:620px;margin-top: 100px;">
-    <!-- <md-toolbar style="background-color:#fff; margin-top: 50px;">
-      <div flex class="md-toolbar-tools">
-        <md-button ng-href="#" ng-click="scroll(1)" style="color:#337ab7; font-weight:bold;" >
-          HOME
-        </md-button>
-        <span flex></span>
-
-        <md-button  style="color:#337ab7; font-weight:bold;">
-          TRY LYTYFY<sup><sup>βeta</sup></sup>
-        </md-button>
-        <span flex></span>
-
-       <a href="http://lytyfy.org/"><img src="./logo.png"/></a>
-        <span flex></span>
-
-        <md-button  ng-href="#" ng-click="scroll(2)" style="color:#337ab7; font-weight:bold;">
-          ABOUT
-        </md-button>
-        <span flex></span>
-
-        <md-button ng-href="#" ng-click="scroll(4)" style="color:#337ab7; font-weight:bold;">
-          CONTACT
-        </md-button>
-      </div>
-    </md-toolbar> -->
+  
         
         <div layout="row">
         <div layout="column" layout-align="center center" >
             <h2 style="text-align:center; padding-left:90px; padding-right:90px; color:#777; font-size:45px; font-family: Ubuntu, sans-serif; letter-spacing:2px; line-height:30px; font-weight:10px;">Work</h2>
         <div id="2" layout="row"
              style="text-align:center; padding-left:90px; padding-right:90px; color:#777; font-size:18px; font-family: Ubuntu, sans-serif; letter-spacing:2px; line-height:30px; font-weight:10px;">
-            Lytyfy is currently focused on clean energy financing space and reimagining how clean energy products and services are financed and distributed to the underbanked market segment in India. We've built a solar financing platform "try.lytyfy.org" that connects individual and institutional investors with curated solar energy projects and creditworthy borrowers willing to purchase solar off-grid products.
+            Lytyfy is currently focused on clean energy financing space and reimagining how clean energy products and services are financed and distributed to the underbanked market segment in India. We've built a solar financing platform "Lyte" that connects individual and institutional investors with curated solar energy projects and creditworthy borrowers willing to purchase solar off-grid products.
 
 
         </div>
